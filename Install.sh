@@ -30,7 +30,7 @@ load System/Install/Preferences.sh
 load System/Install/Gitfiles.sh
 
 # Add Profile.sh to .bash_profile
-echo 'source ~/.setup/System/Profile.sh' >> ~/.bash_profile
+echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
 
 echo ""
 echo ""
