@@ -1,6 +1,6 @@
-echo `{ rm ~/.gitignore && cat output ; } || cat log`
-echo `{ rm ~/.tmux.conf && cat output ; } || cat log`
-echo `{ rm ~/.gemrc && cat output ; } || cat log`
+rm -f ~/.gitignore
+rm -f ~/.tmux.conf
+rm -f ~/.gemrc
 
 ln -s $BASEDIR/etc/gitignore_global ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
