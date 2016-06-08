@@ -1,0 +1,10 @@
+source ~/.setup/System/Profile/Bash/Color.sh
+source ~/.setup/System/Profile/Bash/Autocompletion.sh
+source ~/.setup/System/Profile/Bash/Paths.sh
+#source ~/.setup/System/Profile/Bash/Prompt.sh
+source ~/.setup/System/Profile/Bash/Editor.sh
+source ~/.setup/System/Profile/Bash/Go.sh
+source ~/.setup/System/Profile/Bash/Heroku.sh
+source ~/.setup/System/Profile/Bash/Node.sh
+#source ~/.setup/System/Profile/Bash/Ruby.sh
+source ~/.setup/System/Profile/Bash/XQuartz.sh
