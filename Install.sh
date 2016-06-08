@@ -33,8 +33,7 @@ load System/Install/Gitfiles.sh
 echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
 
 echo ""
+echo " #################################"
+echo " ##### INSTALLATION COMPLETE #####"
+echo " #################################"
 echo ""
-echo ""
-echo "#################################"
-echo "##### YOU SHOULD REBOOT NOW #####"
-echo "#################################"
