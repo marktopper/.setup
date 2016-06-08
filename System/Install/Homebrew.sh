@@ -6,6 +6,6 @@ if ! command_exists brew; then
   echo "=== Homebrew installed."
 fi
 brew -v
-sudo chown -R $USER /usr/local/Cellar
+#sudo chown -R $USER /usr/local/Cellar
 brew update
 echo "=== Updated homebrew bottles."
