@@ -34,3 +34,16 @@ Run installer
 ```
 sh ~/.setup/Install.sh
 ```
+
+## Update
+In order to update this installer script you must run the following task once in order to get the git repository.
+```
+rm ~/.setup
+git clone https://github.com/marktopper/.setup.git ~/.setup
+```
+
+Once this is done you can always update this way.
+```
+cd ~/.setup
+git pull
+```
