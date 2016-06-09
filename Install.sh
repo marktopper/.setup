@@ -15,7 +15,8 @@ load System/Install/Bottles.sh
 load System/Install/Apps.sh
 
 # Install RVM
-load System/Install/RVM.sh
+# TODO: Fix!
+#load System/Install/RVM.sh
 
 # Install Powify
 load System/Install/Powify.sh
@@ -28,6 +29,9 @@ load System/Install/Preferences.sh
 
 # Configure Gitfiles
 load System/Install/Gitfiles.sh
+
+# Install Composer Packages
+load System/Install/Packages.sh
 
 # Add Profile.sh to .bash_profile
 echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
