@@ -33,6 +33,8 @@ load System/Install/Gitfiles.sh
 # Install Composer Packages
 load System/Install/Packages.sh
 
+sudo chown -R $(whoami) $(brew --prefix)
+
 # Add Profile.sh to .bash_profile
 echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
 
