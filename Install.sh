@@ -33,6 +33,12 @@ load System/Install/Gitfiles.sh
 # Install Composer Packages
 load System/Install/Packages.sh
 
+# Install Valet
+load System/Install/Valet.sh
+
+# Install Homestead
+load System/Install/Homestead.sh
+
 sudo chown -R $(whoami) $(brew --prefix)
 
 # Install pow!
