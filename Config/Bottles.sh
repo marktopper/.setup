@@ -36,6 +36,7 @@ bottles=(\
  docker \
  # https://github.com/ravenac95/sudolikeaboss
  sudolikeaboss \
+ mariadb \
 )
 
 # Define bottles to pin
