@@ -1,7 +1,7 @@
 # Define composer packages to install
 packages=(\
- laravel/valet \
+ fabpot/php-cs-fixer \
  laravel/installer \
  laravel/spark-installer \
- fabpot/php-cs-fixer \
+ laravel/valet \
 )
