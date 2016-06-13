@@ -15,7 +15,7 @@ load System/Install/Bottles.sh
 load System/Install/Apps.sh
 
 # Install RVM
-# TODO: Fix!
+# TODO: Fix or remove!
 #load System/Install/RVM.sh
 
 # Install Powify
@@ -39,10 +39,11 @@ load System/Install/Valet.sh
 # Install Homestead
 load System/Install/Homestead.sh
 
+# Set permisions for Homebrew folder
 sudo chown -R $(whoami) $(brew --prefix)
 
 # Install pow!
-curl get.pow.cx | sh
+#curl get.pow.cx | sh
 
 # Add Profile.sh to .bash_profile
 echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
