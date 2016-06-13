@@ -43,6 +43,7 @@ load System/Install/Homestead.sh
 sudo chown -R $(whoami) $(brew --prefix)
 
 # Install pow!
+# TODO: Fix or remove - conflicts with Valet (port conflict)
 #curl get.pow.cx | sh
 
 # Add Profile.sh to .bash_profile
