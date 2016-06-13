@@ -3,6 +3,7 @@ taps=(\
  ravenac95/sudolikeaboss \
  homebrew/dupes \
  homebrew/php \
+ caskroom/versions \
 )
 
 # Define bottles to install
