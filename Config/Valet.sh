@@ -1,0 +1,1 @@
+VALET_PATH=~/Sites
