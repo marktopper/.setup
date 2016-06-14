@@ -1,1 +1,1 @@
-type convert -version &> /dev/null ;
+type convert --version &> /dev/null ;
