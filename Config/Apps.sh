@@ -3,10 +3,10 @@ apps=(\
  #1password \
  #anvil \
  #atom \
- #firefox \
  #battle-net \
  #bartender \
  #dropbox \
+ #firefox \
  #github-desktop \
  #google-chrome \
  #iterm2 \
