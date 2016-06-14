@@ -10,6 +10,7 @@ apps=(\
  #github-desktop \
  #google-chrome \
  #iterm2 \
+ java \
  #mamp \
  #opera \
  #parallels-desktop \
