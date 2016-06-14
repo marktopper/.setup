@@ -18,7 +18,7 @@ loadFilesIn() {
 
 # Check if command exists
 command_exists () {
-  FILE=./"$BASEDIR"/System/CommandExists/"$1".sh
+  FILE="$BASEDIR"/System/CommandExists/"$1".sh
   if [ -f "$FILE" ]
   then
     source $FILE
