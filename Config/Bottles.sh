@@ -18,11 +18,14 @@ bottles=(\
  hub \
  icoutils \
  imagemagick \
+ popt \
  libmemcached \
+ librsync \
  memcached \
  openssl \
  ossp-uuid \
  qt \
+ rdiff-backup \
  readline \
  redis \
  tmux \
@@ -37,7 +40,8 @@ bottles=(\
  docker \
  # https://github.com/ravenac95/sudolikeaboss
  sudolikeaboss \
- mariadb \
+ # Conflicts with mysql, so use eaiher MySQL or MariaDB
+ #mariadb \
 )
 
 # Define bottles to pin
