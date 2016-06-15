@@ -1,3 +1,7 @@
+# Die on failures
+set -e
+
+# Load global system
 source ~/.setup/System/Global.sh
 
 # Install Homebrew
@@ -10,8 +14,7 @@ load System/Install/Bottles.sh
 load System/Install/Apps.sh
 
 # Install RVM
-# TODO: Fix or remove!
-#load System/Install/RVM.sh
+load System/Install/RVM.sh
 
 # Install Powify
 load System/Install/Powify.sh
@@ -41,13 +44,12 @@ sudo chown -R $(whoami) $(brew --prefix)
 # TODO: Fix or remove - conflicts with Valet (port conflict)
 #curl get.pow.cx | sh
 
-# Add Profile.sh to .bash_profile
-echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
+if [[ $WRITE_TO_PROFILE == true ]]; then
+  # Add Profile.sh to .bash_profile
+  echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
+fi
 
-echo ""
-echo " #################################"
-echo " ##### INSTALLATION COMPLETE #####"
-echo " #################################"
-echo ""
+print_success "Installation complete!"
 
+# Load profile
 source ~/.bash_profile

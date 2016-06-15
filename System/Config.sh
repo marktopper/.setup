@@ -1,2 +1,2 @@
 # Load all files in ./Config
-loadFilesIn Config
+load_files_in Config

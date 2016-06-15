@@ -7,7 +7,7 @@ function tap_bottle {
 
 # Install brew bottle if command does not exists
 function install_bottle {
-  if ! command_exists $1; then
+  if ! bottle_installed $1; then
     print_header "Installing $1..."
     brew install $1
     print_header "$1 installed."
@@ -23,20 +23,26 @@ function pin_bottle {
   print_header "$1 pinned."
 }
 
-# Tap all taps
-for tap in "${taps[@]}"
-do
-  tap_bottle $tap
-done
+if [[ $TAP_BOTTLES == true ]]; then
+  # Tap all taps
+  for tap in "${taps[@]}"
+  do
+    tap_bottle $tap
+  done
+fi
 
-# Install all bottles
-for bottle in "${bottles[@]}"
-do
-  install_bottle $bottle
-done
+if [[ $INSTALL_BOTTLES == true ]]; then
+  # Install all bottles
+  for bottle in "${bottles[@]}"
+  do
+    install_bottle $bottle
+  done
+fi
 
-# Pin all pins
-for pin in "${pin[@]}"
-do
-  pin_bottle $pin
-done
+if [[ $PIN_BOTTLES == true ]]; then
+  # Pin all pins
+  for pin in "${pin[@]}"
+  do
+    pin_bottle $pin
+  done
+fi

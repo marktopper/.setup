@@ -1,3 +1,7 @@
+# Die on failures
+set -e
+
+# Load global system
 source ~/.setup/System/Global.sh
 
 # Uninstall Homestead
@@ -27,13 +31,12 @@ load System/Uninstall/Bottles.sh
 # Uninstall Homebrew
 load System/Uninstall/Homebrew.sh
 
-# Remove Profile.sh from .bash_profile
-echo '#source ~/.setup/System/Profile.sh' > ~/.bash_profile
+if [[ $WRITE_TO_PROFILE == true ]]; then
+  # Remove Profile.sh from .bash_profile
+  echo '#source ~/.setup/System/Profile.sh' > ~/.bash_profile
+fi
 
-echo ""
-echo " ###################################"
-echo " ##### UNINSTALLATION COMPLETE #####"
-echo " ###################################"
-echo ""
+print_success "Uninstallation complete!"
 
+# Load profile
 source ~/.bash_profile

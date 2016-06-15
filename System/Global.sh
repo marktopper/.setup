@@ -1,16 +1,15 @@
-# Die on failures
-set -e
-
 # Echo all commands
-# set -x
+if [[ $DEBUG == true ]]; then
+  set -x
+fi
 
-# Profile file from base path
+# Load a file from this application
 load () {
   source ~/.setup/$1;
 }
 
-# Profile all files in a folder
-loadFilesIn() {
+# Load all files in a folder from this application
+load_files_in() {
   for ENTRY in `ls ~/.setup/$1`; do
     load "$1"/"$ENTRY"
   done
@@ -18,18 +17,41 @@ loadFilesIn() {
 
 # Check if command exists
 command_exists () {
-  FILE=~/.setup/System/CommandExists/"$1".sh
-  if [ -f "$FILE" ]
-  then
-    source $FILE
-  else
-    type "$1" &> /dev/null ;
+  type "$1" &> /dev/null ;
+}
+
+# Check if bottle is installed
+bottle_installed () {
+  type brew ls --versions $1 &> /dev/null ;
+}
+
+# Check if package is installed
+package_installed () {
+  if [ -f ~/.composer/vendor/$1 ]; then
+    type true
+  fi
+}
+
+# Check if cask application is installed
+application_installed () {
+  if [ -f /usr/local/Caskroom/$1 ]; then
+    type true
   fi
 }
 
 # Print styled header
 print_header () {
   printf "${TEXT_COLOR_LIGHT_BLUE}==> ${TEXT_COLOR_DEFAULT} $1 \n"
+}
+
+# Print styled error
+print_error () {
+  printf "${BACKGROUND_COLOR_RED}$1${BACKGROUND_COLOR_DEFAULT} \n"
+}
+
+# Print styled success message
+print_success () {
+  printf "${TEXT_COLOR_GREEN}$1${TEXT_COLOR_DEFAULT} \n"
 }
 
 # Load color variables

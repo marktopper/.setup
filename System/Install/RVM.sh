@@ -1,7 +1,9 @@
-if ! command_exists rvm; then
-  print_header "Installing RVM..."
-  curl -L https://get.rvm.io | bash -s stable
-  print_header "RVM installed."
-  source ~/.bash_profile
+if [[ $INSTALL_RVM == true ]]; then
+  if ! command_exists rvm; then
+    print_header "Installing RVM..."
+    curl -L https://get.rvm.io | bash -s stable
+    print_header "RVM installed."
+    source ~/.bash_profile
+  fi
+  rvm -v
 fi
-rvm -v
