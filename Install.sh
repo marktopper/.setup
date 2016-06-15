@@ -49,3 +49,5 @@ echo " #################################"
 echo " ##### INSTALLATION COMPLETE #####"
 echo " #################################"
 echo ""
+
+source ~/.bash_profile

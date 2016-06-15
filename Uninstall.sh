@@ -35,3 +35,5 @@ echo " ###################################"
 echo " ##### UNINSTALLATION COMPLETE #####"
 echo " ###################################"
 echo ""
+
+source ~/.bash_profile
