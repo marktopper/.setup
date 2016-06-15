@@ -4,14 +4,29 @@ clear-slack-channel () {
   TEAM=$1
   CHANNEL=$2
 
+  # Ensure that cache path for slack-team-tokens exists
+  if [ ! -d ~/.setup/.cache/slack-team-tokens ]; then
+    mkdir ~/.setup/.cache/slack-team-tokens
+  fi
+
   if [ -z "$TEAM" ]; then
     echo "Usage: clear-slack-channel team channel"
   else
     if [ -z "$CHANNEL" ]; then
       echo "Usage: clear-slack-channel team channel"
     else
-      print_header "Deleting..."
+      FILE=~/.setup/.cache/slack-team-tokens/$TEAM.txt
+      if [ ! -e "$FILE" ]; then
+        echo "We do not have a token for \"$TEAM\"."
+        echo "Create one on https://api.slack.com/docs/oauth-test-tokens for the team \"$TEAM\" and enter it below."
+        read -p "Enter token: " TOKEN
+        cache_write "slack-team-tokens/$TEAM.txt" "$TOKEN"
+        print_success "Token saved at ~/.setup/.cache/slack-team-tokens/$TEAM.txt"
+      fi
+
+      TOKEN=$(cache_read "slack-team-tokens/$TEAM.txt")
+
+      slack-cleaner --token $TOKEN --message --channel $CHANNEL --user "*" --bot --perform
     fi
   fi
-
 }
