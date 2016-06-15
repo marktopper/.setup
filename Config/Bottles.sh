@@ -5,9 +5,13 @@ PIN_BOTTLES=true
 
 # Define bottles to tap
 taps=(\
+ # Required for installing sudolikeaboss bottle
  ravenac95/sudolikeaboss \
+ # Required!
  homebrew/dupes \
+ # Required for installing php70 bottle
  homebrew/php \
+ # Required for installing specific versions of bottles
  caskroom/versions \
 )
 
@@ -38,13 +42,19 @@ bottles=(\
  wget \
  libxml2 \
  php70 \
+ # Required for using pip
+ python \
  composer \
  node \
- mysql \ # Conflicts with mariadb, so use eaither MySQL or MariaDB
- thefuck \ # https://github.com/nvbn/thefuck
+ # Conflicts with mariadb, so use eaither MySQL or MariaDB
+ mysql \
+ # https://github.com/nvbn/thefuck
+ thefuck \
  docker \
- sudolikeaboss \ # https://github.com/ravenac95/sudolikeaboss
- #mariadb \ # Conflicts with mysql, so use eaiher MySQL or MariaDB
+ # https://github.com/ravenac95/sudolikeaboss
+ sudolikeaboss \
+ # Conflicts with mysql, so use eaiher MySQL or MariaDB
+ #mariadb \
 )
 
 # Define bottles to pin
