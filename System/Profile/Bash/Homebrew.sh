@@ -1,4 +1,4 @@
-brew-update() {
+brew_update() {
   brew update && brew upgrade && brew cleanup \
     && cask-upgrade && cask-retire && brew cask cleanup \
       && brew doctor && brew cask doctor
@@ -41,4 +41,4 @@ cask-retire() {
   done < <(brew cask list --versions)
 }
 
-alias bu="brew-update"
+alias bu="brew_update"
