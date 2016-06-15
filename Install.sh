@@ -40,6 +40,11 @@ load System/Install/Homestead.sh
 # Set permisions for Homebrew folder
 sudo chown -R $(whoami) $(brew --prefix)
 
+# Install slack-cleaner
+# https://github.com/kfei/slack-cleaner
+# TODO: Move to config
+pip install slack-cleaner
+
 # Install pow!
 # TODO: Fix or remove - conflicts with Valet (port conflict)
 #curl get.pow.cx | sh
