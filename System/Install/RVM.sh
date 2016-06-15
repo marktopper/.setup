@@ -1,7 +1,7 @@
 if ! command_exists rvm; then
-  echo "=== Installing RVM..."
+  print_header "Installing RVM..."
   curl -L https://get.rvm.io | bash -s stable
-  echo "=== RVM installed."
+  print_header "RVM installed."
   source ~/.bash_profile
 fi
 rvm -v

@@ -1,26 +1,26 @@
 # Tap brew bottle
 function tap_bottle {
-  echo "=== Tapping $1..."
+  print_header "Tapping $1..."
   brew tap $1
-  echo "=== $1 tapped."
+  print_header "$1 tapped."
 }
 
 # Install brew bottle if command does not exists
 function install_bottle {
   if ! command_exists $1; then
-    echo "=== Installing $1..."
+    print_header "Installing $1..."
     brew install $1
-    echo "=== $1 installed."
+    print_header "$1 installed."
   else
-    echo "=== Skipping $1, already installed."
+    print_header "Skipping $1, already installed."
   fi
 }
 
 # Pin brew bottle
 function pin_bottle {
-  echo "=== Pinging $1..."
+  print_header "Pinging $1..."
   brew pin $1
-  echo "=== $1 pinned."
+  print_header "$1 pinned."
 }
 
 # Tap all taps

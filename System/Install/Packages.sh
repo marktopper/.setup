@@ -1,8 +1,8 @@
 # Install composer package if not installed
 function install_package {
-  echo "=== Installing $1..."
+  print_header "Installing $1..."
   composer global require $1
-  echo "=== $1 installed."
+  print_header "$1 installed."
 }
 
 # Install all composer packages

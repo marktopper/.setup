@@ -1,20 +1,21 @@
 # Install Homebrew
 if ! command_exists brew; then
-  echo "=== Installing Homebrew..."
+  print_header "Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew doctor
-  echo "=== Homebrew installed."
+  print_header "Homebrew installed."
 fi
 #brew -v
 #sudo chown -R $USER /usr/local/Cellar
 brew update
 brew cleanup
 brew cask cleanup
-echo "=== Updated homebrew bottles."
+print_header "Updated homebrew bottles."
 
 # Update homebrew path if not updated
+# https://github.com/caskroom/homebrew-cask/issues/21913
 if [[ -e /opt/homebrew-cask/Caskroom ]]; then
-  echo "=== Updating homebrew path..."
+  print_header "Updating homebrew path..."
   mv /opt/homebrew-cask/Caskroom /usr/local/Caskroom
-  echo "=== Homebrew path updated."
+  print_header "Homebrew path updated."
 fi

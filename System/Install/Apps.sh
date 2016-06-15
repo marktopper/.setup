@@ -1,8 +1,8 @@
 # Install  app if not installed
 function install_app {
-  echo "=== Installing $1..."
+  print_header "Installing $1..."
   brew cask install $1
-  echo "=== $1 installed."
+  print_header "$1 installed."
 }
 
 # Install all cask applications
