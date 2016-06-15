@@ -70,6 +70,46 @@ cache_write () {
   echo $2 > ~/.setup/.cache/$1
 }
 
+# Check if app is enabled
+app_enabled () {
+  for app in "${apps[@]}"
+  do
+    if [[ $app == $1 ]]; then
+      type true
+    fi
+  done
+}
+
+# Check if bottle is enabled
+bottle_enabled () {
+  for bottle in "${bottles[@]}"
+  do
+    if [[ $bottle == $1 ]]; then
+      type true
+    fi
+  done
+}
+
+# Check if pin is enabled
+pin_enabled () {
+  for pin in "${pins[@]}"
+  do
+    if [[ $pin == $1 ]]; then
+      type true
+    fi
+  done
+}
+
+# Check if tap is enabled
+tap_enabled () {
+  for tap in "${taps[@]}"
+  do
+    if [[ $tap == $1 ]]; then
+      type true
+    fi
+  done
+}
+
 # Load color variables
 load System/Global/Colors.sh
 
