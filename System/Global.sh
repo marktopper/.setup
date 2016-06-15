@@ -54,6 +54,22 @@ print_success () {
   printf "${TEXT_COLOR_GREEN}$1${TEXT_COLOR_DEFAULT} \n"
 }
 
+# Ensure that cache path exists
+if [ ! -d ~/.setup/.cache ]; then
+  mkdir ~/.setup/.cache
+fi
+
+# Read from cache
+cache_read () {
+  CONTENT=$(<~/.setup/.cache/$1)
+  echo $CONTENT
+}
+
+# Write to cache
+cache_write () {
+  echo $2 > ~/.setup/.cache/$1
+}
+
 # Load color variables
 load System/Global/Colors.sh
 

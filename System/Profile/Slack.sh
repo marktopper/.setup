@@ -27,6 +27,7 @@ clear-slack-channel () {
       TOKEN=$(cache_read "slack-team-tokens/$TEAM.txt")
 
       slack-cleaner --token $TOKEN --message --channel $CHANNEL --user "*" --bot --perform
+      # TODO: Make a single post to the channel!
     fi
   fi
 }
