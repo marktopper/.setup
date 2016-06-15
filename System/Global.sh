@@ -27,5 +27,13 @@ command_exists () {
   fi
 }
 
+# Print styled header
+print_header () {
+  printf "${TEXT_COLOR_LIGHT_BLUE}==> ${TEXT_COLOR_DEFAULT} $1 \n"
+}
+
+# Load color variables
+load System/Global/Colors.sh
+
 # Configuration
 load System/Config.sh
