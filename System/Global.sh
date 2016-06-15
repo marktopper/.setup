@@ -6,19 +6,19 @@ set -e
 
 # Profile file from base path
 load () {
-  source $BASEDIR/$1;
+  source ~/.setup/$1;
 }
 
 # Profile all files in a folder
 loadFilesIn() {
-  for ENTRY in `ls $BASEDIR/$1`; do
+  for ENTRY in `ls ~/.setup/$1`; do
     load "$1"/"$ENTRY"
   done
 }
 
 # Check if command exists
 command_exists () {
-  FILE="$BASEDIR"/System/CommandExists/"$1".sh
+  FILE=~/.setup/System/CommandExists/"$1".sh
   if [ -f "$FILE" ]
   then
     source $FILE

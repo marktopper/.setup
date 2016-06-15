@@ -1,9 +1,4 @@
-BASEDIR=$(dirname "$0")
-source $BASEDIR/System/Global.sh
-
-pushd `dirname $0` > /dev/null
-FULLPATH=`pwd -P`
-popd > /dev/null
+source ~/.setup/System/Global.sh
 
 # Uninstall Homestead
 load System/Uninstall/Homestead.sh
