@@ -1,3 +1,8 @@
+# Define wether or not to install the taps, bottles and pins listed below
+TAP_BOTTLES=true
+INSTALL_BOTTLES=true
+PIN_BOTTLES=true
+
 # Define bottles to tap
 taps=(\
  ravenac95/sudolikeaboss \
@@ -7,6 +12,7 @@ taps=(\
 )
 
 # Define bottles to install
+# Simply comment out un-wanted bottles
 bottles=(\
  ack \
  autojump \
@@ -34,14 +40,11 @@ bottles=(\
  php70 \
  composer \
  node \
- mysql \
- # https://github.com/nvbn/thefuck
- thefuck \
+ mysql \ # Conflicts with mariadb, so use eaither MySQL or MariaDB
+ thefuck \ # https://github.com/nvbn/thefuck
  docker \
- # https://github.com/ravenac95/sudolikeaboss
- sudolikeaboss \
- # Conflicts with mysql, so use eaiher MySQL or MariaDB
- #mariadb \
+ sudolikeaboss \ # https://github.com/ravenac95/sudolikeaboss
+ #mariadb \ # Conflicts with mysql, so use eaiher MySQL or MariaDB
 )
 
 # Define bottles to pin
