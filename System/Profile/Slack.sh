@@ -17,8 +17,8 @@ clear-slack-channel () {
     else
       FILE=~/.setup/.cache/slack-team-tokens/$TEAM.txt
       if [ ! -e "$FILE" ]; then
-        echo "We do not have a token for \"$TEAM\"."
-        echo "Create one on https://api.slack.com/docs/oauth-test-tokens for the team \"$TEAM\" and enter it below."
+        print_error "We do not have a token for \"$TEAM\"."
+        echo "Create one at https://api.slack.com/docs/oauth-test-tokens for \"$TEAM\"."
         read -p "Enter token: " TOKEN
         cache_write "slack-team-tokens/$TEAM.txt" "$TOKEN"
         print_success "Token saved at ~/.setup/.cache/slack-team-tokens/$TEAM.txt"
