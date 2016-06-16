@@ -12,4 +12,5 @@ if [[ $LOAD_PROFILE ]]; then
   load System/Profile/Slack.sh
   load System/Profile/Backup.sh
   load System/Profile/SSH.sh
+  load System/Profile/Composer.sh
 fi
