@@ -7,7 +7,7 @@ function tap_bottle {
 
 # Install brew bottle if command does not exists
 function install_bottle {
-  if ! bottle_installed $1; then
+  if [ ! -d /usr/local/Cellar/$1 ]; then
     print_header "Installing $1..."
     brew install $1
     print_header "$1 installed."

@@ -10,5 +10,6 @@ if [[ $LOAD_PROFILE ]]; then
   load System/Profile/Aliases.sh
   load System/Profile/Fuck.sh
   load System/Profile/Slack.sh
+  load System/Profile/Backup.sh
   load System/Profile/SSH.sh
 fi

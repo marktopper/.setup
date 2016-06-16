@@ -20,25 +20,6 @@ command_exists () {
   type "$1" &> /dev/null ;
 }
 
-# Check if bottle is installed
-bottle_installed () {
-  type brew ls --versions $1 &> /dev/null ;
-}
-
-# Check if package is installed
-package_installed () {
-  if [ -f ~/.composer/vendor/$1 ]; then
-    type true
-  fi
-}
-
-# Check if cask application is installed
-application_installed () {
-  if [ -f /usr/local/Caskroom/$1 ]; then
-    type true
-  fi
-}
-
 # Print styled header
 print_header () {
   printf "${TEXT_COLOR_LIGHT_BLUE}==> ${TEXT_COLOR_DEFAULT} $1 \n"

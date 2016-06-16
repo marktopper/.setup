@@ -1,6 +1,6 @@
 # Install  app if not installed
 function install_app {
-  if ! application_installed $1; then
+  if [ ! -d /usr/local/Caskroom/$1 ]; then
     print_header "Installing $1..."
     brew cask install $1
     print_header "$1 installed."

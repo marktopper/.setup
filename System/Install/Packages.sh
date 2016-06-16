@@ -1,9 +1,13 @@
 if [[ $INSTALL_PACKAGES == true ]]; then
   # Install composer package if not installed
   function install_package {
-    print_header "Installing $1..."
-    composer global require $1
-    print_header "$1 installed."
+    if [ ! -d ~/.composer/vendor/$1 ]; then
+      print_header "Installing $1..."
+      composer global require $1
+      print_header "$1 installed."
+    else
+      print_header "Skipping $1, already installed."
+    fi
   }
 
   # Install all composer packages
