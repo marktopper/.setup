@@ -4,6 +4,9 @@ set -e
 # Load global system
 source ~/.setup/System/Global.sh
 
+# Load profile paths
+load System/Profile/Bash/Paths.sh
+
 # Install Homebrew
 load System/Install/Homebrew.sh
 
