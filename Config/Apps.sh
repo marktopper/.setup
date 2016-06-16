@@ -4,6 +4,7 @@ INSTALL_APPS=true
 # Define cask applications to install
 apps=(\
  #1password \
+ #adobe-creative-cloud \
  #anvil \
  #atom \
  #battle-net \
