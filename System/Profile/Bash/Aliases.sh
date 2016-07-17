@@ -19,3 +19,20 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias list-users="dscl . list /Users | grep -v ^_.*"
+alias ls="ls -G"
+alias lsla="ls -la"
+
+__valet_site () {
+  if [[ -z $1 ]]; then
+    print_error "Missing argument [name]."
+  else
+    GO=$(pwd)
+    cd $VALET_PATH
+    laravel new $1
+    cd $1
+    valet secure
+    cd $GO
+  fi
+}
+
+alias valet-site="__valet_site"
