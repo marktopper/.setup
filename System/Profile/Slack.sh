@@ -1,6 +1,6 @@
 # Clear channels in Slack (ask for token one first use for a new team)
 # Usage: clear-slack-channel team channel
-clear-slack-channel () {
+__clear_slack_channel () {
   TEAM=$1
   CHANNEL=$2
 
@@ -31,3 +31,5 @@ clear-slack-channel () {
     fi
   fi
 }
+
+alias clear-slack-channel='__clear_slack_channel'
