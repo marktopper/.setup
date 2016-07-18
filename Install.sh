@@ -34,6 +34,9 @@ load System/Install/Gitfiles.sh
 # Install Composer Packages
 load System/Install/Packages.sh
 
+# Install Node Packages
+load System/Install/Node.sh
+
 # Install Valet
 load System/Install/Valet.sh
 
