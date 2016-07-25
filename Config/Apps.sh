@@ -20,6 +20,7 @@ apps=(\
  #parallels-desktop \
  #phpstorm \
  #postbox \
+ #postman \
  #sequel-pro \
  #skype \
  #sonos \
