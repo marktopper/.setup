@@ -21,6 +21,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias list-users="dscl . list /Users | grep -v ^_.*"
 alias ls="ls -G"
 alias lsla="ls -la"
+alias laravel-cs-fixer="php-cs-fixer fix . --fixers=\"-psr0\""
 
 __valet_site () {
   if [[ -z $1 ]]; then
