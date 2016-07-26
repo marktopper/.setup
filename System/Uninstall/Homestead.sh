@@ -1,2 +1,4 @@
 # Uninstall Homestead
-vagrant box remove laravel/homestead
+if vagrant box list | grep -q '^laravel/homestead '; then
+  vagrant box remove laravel/homestead
+fi
