@@ -3,7 +3,7 @@ __is_pinned() {
   [[ *";${1};"* != "${pinned}" ]] && return 0 || return 1
 }
 
-brew-update() {
+__brew_update() {
   (set -x; brew update;)
   (set -x; brew cask update;)
 
@@ -32,3 +32,5 @@ brew-update() {
       fi
   done
 }
+
+alias brew-update="__brew_update"

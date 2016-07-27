@@ -31,12 +31,18 @@ load System/Uninstall/Bottles.sh
 # Uninstall Homebrew
 load System/Uninstall/Homebrew.sh
 
+# Uninstall OhMyZsh
+load System/Uninstall/OhMyZsh.sh
+
 if [[ $WRITE_TO_PROFILE == true ]]; then
   # Remove Profile.sh from .bash_profile
   echo '#source ~/.setup/System/Profile.sh' > ~/.bash_profile
 fi
 
 print_success "Uninstallation complete!"
+
+# Do not die on failures
+set +e
 
 # Load profile
 source ~/.bash_profile

@@ -43,6 +43,9 @@ load System/Install/Valet.sh
 # Install Homestead
 load System/Install/Homestead.sh
 
+# Install OhMyZsh
+load System/Install/OhMyZsh.sh
+
 # Set permisions for Homebrew folder
 sudo chown -R $(whoami) $(brew --prefix)
 
@@ -57,10 +60,15 @@ pip install slack-cleaner
 
 if [[ $WRITE_TO_PROFILE == true ]]; then
   # Add Profile.sh to .bash_profile
+  # TODO: Append to end of file instead
+  # TODO: Do not append if it's already there
   echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
 fi
 
 print_success "Installation complete!"
+
+# Do not die on failures
+set +e
 
 # Load profile
 source ~/.bash_profile

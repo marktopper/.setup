@@ -21,8 +21,12 @@ bottles=(\
  ack \
  autojump \
  automake \
+ # Required by OhMyZsh
+ bash-completion \
  colordiff \
  curl \
+ # Required by OhMyZsh
+ gf-complete \
  git \
  git-flow \
  hub \
@@ -55,6 +59,10 @@ bottles=(\
  sudolikeaboss \
  # Conflicts with mysql, so use eaiher MySQL or MariaDB
  #mariadb \
+ # Required by OhMyZsh
+ zsh \
+ # Required by OhMyZsh
+ zsh-completions \
 )
 
 # Define bottles to pin
