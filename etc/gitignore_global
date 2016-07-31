@@ -43,3 +43,9 @@ Thumbs.db
 
 # Client-specific
 BlueKai/**/.ruby-gemset
+
+# Editors #
+###########
+
+# PHPSTORM #
+.idea
