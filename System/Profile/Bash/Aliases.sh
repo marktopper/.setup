@@ -1,4 +1,5 @@
 alias art='php artisan'
+alias tinker='php artisan tinker'
 alias home='cd ~/'
 alias hosts='sudo nano /etc/hosts'
 alias reload='source ~/.bash_profile'
