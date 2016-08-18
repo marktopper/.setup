@@ -1,3 +1,4 @@
+alias clear-setup-cache="rm -rf ~/.setup/.cache"
 alias art='php artisan'
 alias tinker='php artisan tinker'
 alias ipconfig='/sbin/ifconfig'
