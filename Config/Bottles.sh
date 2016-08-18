@@ -30,6 +30,7 @@ bottles=(\
  git \
  git-flow \
  hub \
+ #httpie \
  icoutils \
  imagemagick \
  popt \
