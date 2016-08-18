@@ -10,6 +10,7 @@ if [[ $INSTALL_HOMESTEAD == true ]]; then
 
     git clone https://github.com/laravel/homestead.git ~/Homestead
 
+    chmod +x ~/Homestead/init.sh
     bash ~/Homestead/init.sh
 
     [ -d $HOMESTEAD_PATH ] || mkdir $HOMESTEAD_PATH
