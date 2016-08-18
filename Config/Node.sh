@@ -4,4 +4,6 @@ INSTALL_NODE_PACKAGES=true
 # Define node packages to install
 node_packages=(\
  bower \
+ gulp \
+ gulp-cli \
 )
