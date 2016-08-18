@@ -16,3 +16,8 @@ if [[ $INSTALL_APPS == true ]]; then
     install_app $app
   done
 fi
+
+# If Adobe Creative Cloud is installed, run installer
+if [ -f /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app ]; then
+  open /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app;
+fi
