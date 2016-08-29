@@ -51,14 +51,14 @@ bottles=(\
  python \
  composer \
  node \
- # Conflicts with mariadb, so use eaither MySQL or MariaDB
+ # Conflicts with mariadb, so use either MySQL or MariaDB
  mysql \
  # https://github.com/nvbn/thefuck
  thefuck \
  docker \
  # https://github.com/ravenac95/sudolikeaboss
  sudolikeaboss \
- # Conflicts with mysql, so use eaiher MySQL or MariaDB
+ # Conflicts with mysql, so use either MySQL or MariaDB
  #mariadb \
  # Required by OhMyZsh
  zsh \
