@@ -54,10 +54,6 @@ sudo chown -R $(whoami) $(brew --prefix)
 # TODO: Move to config
 pip install slack-cleaner
 
-# Install pow!
-# TODO: Fix or remove - conflicts with Valet (port conflict)
-#curl get.pow.cx | sh
-
 if [[ $WRITE_TO_PROFILE == true ]]; then
   # Add Profile.sh to .bash_profile
   # TODO: Append to end of file instead
