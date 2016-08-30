@@ -1,7 +1,7 @@
 # Usage: syncssh
 # Will sync all files in the ~/.ssh folder with the backup folder
 
-if [[ $ENABLE_SSH_SYNCING == true ]]; then
+if [[ $ENABLE_SSH_SYNCING == true && $INSTALL_COMPLETE != true ]]; then
   function syncssh () {
     if [[ ! -d $SSH_PATH ]]; then
       mkdir $SSH_PATH

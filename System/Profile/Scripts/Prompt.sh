@@ -1,8 +1,7 @@
 function __my_chruby_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset="@$gemset"
-  local version=`ruby -v | awk '{print $2}'`
-  local full="$version$gemset"
+  local full="$HOSTNAME$gemset"
   [ "$full" != "" ] && echo "$full "
 }
 
