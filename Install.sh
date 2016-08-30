@@ -63,5 +63,8 @@ print_success "Installation complete!"
 # Do not die on failures
 set +e
 
+# Set variable to let scripts know that install have just been completed
+INSTALL_COMPLETE=true
+
 # Load profile
 source ~/.bash_profile
