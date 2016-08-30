@@ -16,9 +16,6 @@ load System/Install/Bottles.sh
 # Install Apps
 load System/Install/Apps.sh
 
-# Install RVM
-load System/Install/RVM.sh
-
 # Install Powify
 load System/Install/Powify.sh
 

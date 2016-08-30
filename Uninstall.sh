@@ -19,9 +19,6 @@ load System/Uninstall/Vagrant.sh
 # Uninstall Powify
 load System/Uninstall/Powify.sh
 
-# Uninstall RVM
-load System/Uninstall/RVM.sh
-
 # Uninstall Apps
 load System/Uninstall/Apps.sh
 
@@ -36,6 +33,7 @@ load System/Uninstall/OhMyZsh.sh
 
 if [[ $WRITE_TO_PROFILE == true ]]; then
   # Remove Profile.sh from .bash_profile
+  # TODO: Remove correcly instead of this
   echo '#source ~/.setup/System/Profile.sh' > ~/.bash_profile
 fi
 
