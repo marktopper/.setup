@@ -1,3 +1,6 @@
+# Clear User Setup Config
+alias clear-setup-config='rm -rf ~/.SetupUserConfig; cp -r ~/.setup/Config ~/.SetupUserConfig'
+
 # Airport/Wifi Scan - get details: airport -s
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport'
 
