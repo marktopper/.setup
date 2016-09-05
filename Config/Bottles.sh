@@ -29,6 +29,7 @@ bottles=(\
  gf-complete \
  git \
  git-flow \
+ homebrew/php/phpunit \
  hub \
  #httpie \
  icoutils \
