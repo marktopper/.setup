@@ -1,4 +1,4 @@
-# Define wether or not to install the taps, bottles and pins listed below
+# Define whether or not to install the taps, bottles and pins listed below
 TAP_BOTTLES=true
 INSTALL_BOTTLES=true
 PIN_BOTTLES=true

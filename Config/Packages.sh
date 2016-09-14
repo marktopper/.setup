@@ -1,4 +1,4 @@
-# Define wether or not to install the packages listed below
+# Define whether or not to install the packages listed below
 INSTALL_PACKAGES=true
 
 # Define composer packages to install

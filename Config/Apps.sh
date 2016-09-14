@@ -1,4 +1,4 @@
-# Define wether or not to install the apps listed below
+# Define whether or not to install the apps listed below
 INSTALL_APPS=true
 
 # Define cask applications to install
