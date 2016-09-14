@@ -5,7 +5,7 @@ set -e
 source ~/.setup/System/Global.sh
 
 # Load profile paths
-load System/Profile/Bash/Paths.sh
+load System/Profile/Scripts/Paths.sh
 
 # Install Homebrew
 load System/Install/Homebrew.sh
@@ -42,6 +42,9 @@ load System/Install/Homestead.sh
 
 # Install OhMyZsh
 load System/Install/OhMyZsh.sh
+
+# Install Scripts
+load System/Install/Scripts.sh
 
 # Set permisions for Homebrew folder
 sudo chown -R $(whoami) $(brew --prefix)
