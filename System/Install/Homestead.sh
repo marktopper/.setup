@@ -1,11 +1,9 @@
 if [[ $INSTALL_HOMESTEAD == true ]]; then
   # Install Homestead
 
-  LIST=`vagrant box list`
-
-  # TODO: Fix this since it thinks laravel/homestead is not
-  # allready installed another box is installed as well.
-  if [[ ! $LIST == "laravel/homestead (virtualbox, 0.4.4)" ]]; then
+  if vagrant box list | grep -q laravel/homestead; then
+    echo "Box [laravel/homestead] already installed!";
+  else
     vagrant box add laravel/homestead
 
     git clone https://github.com/laravel/homestead.git ~/Homestead
