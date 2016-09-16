@@ -4,6 +4,7 @@ __secure_valet_sites() {
         for P in `valet paths`; do
             if [[ $P != '[' && $P != ']' ]]; then
                 P="${P//\"}"
+                P="${P//\,}"
                 for project in `ls $P`; do
                     cd "$P/$project"
                     valet secure
