@@ -12,6 +12,7 @@ apps=(\
  #dropbox \
  #firefox \
  #github-desktop \
+ #gitter \
  #google-chrome \
  #iterm2 \
  java \
