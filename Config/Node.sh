@@ -7,4 +7,5 @@ node_packages=(\
  grunt-cli \
  gulp \
  gulp-cli \
+ mocha \
 )
