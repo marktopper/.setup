@@ -25,6 +25,7 @@ bottles=(\
  bash-completion \
  colordiff \
  curl \
+ doxygen \
  # Required by OhMyZsh
  gf-complete \
  git \
