@@ -22,6 +22,7 @@ apps=(\
  #phpstorm \
  #postbox \
  #postman \
+ qlmarkdown \
  #sequel-pro \
  #skype \
  #sonos \
