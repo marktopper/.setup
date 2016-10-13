@@ -41,6 +41,7 @@ bottles=(\
  memcached \
  openssl \
  ossp-uuid \
+ qt5 \
  rdiff-backup \
  readline \
  redis \
