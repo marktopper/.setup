@@ -66,3 +66,5 @@ alias valet-site="__valet_site"
 chuck () {
   echo `curl -s http://api.icndb.com/jokes/random` | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["value"]["joke"]';
 }
+
+alias snake="php ~/.php-snake/play.php"

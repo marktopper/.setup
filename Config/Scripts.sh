@@ -4,4 +4,6 @@ INSTALL_SCRIPTS=true
 # Define other scripts to run
 scripts=(\
   git-subsplit \
+  # https://github.com/AndrewCarterUK/PHPSnake (full install and setup with play alias "snake")
+  #php-snake \
 )
