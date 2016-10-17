@@ -9,6 +9,7 @@ apps=(\
  #atom \
  #battle-net \
  #bartender \
+ #coda \
  #dropbox \
  #firefox \
  #github-desktop \
