@@ -11,6 +11,7 @@ apps=(\
  #bartender \
  #coda \
  #dropbox \
+ #filezilla \
  #firefox \
  #github-desktop \
  #gitter \
