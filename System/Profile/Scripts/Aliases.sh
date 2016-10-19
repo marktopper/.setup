@@ -68,3 +68,13 @@ chuck () {
 }
 
 alias snake="php ~/.php-snake/play.php"
+
+__servephp () {
+    if [ $# -eq 1 ]; then
+        php -S 0.0.0.0:$1
+    else
+        php -S 0.0.0.0:8000
+    fi
+}
+
+alias servephp="__servephp"
