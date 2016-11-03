@@ -78,3 +78,13 @@ __servephp () {
 }
 
 alias servephp="__servephp"
+
+# A fix since Valet often break on Sierra.
+__valet_fix () {
+    brew uninstall caddy && brew install caddy
+    rm ~/.composer/vendor/laravel/valet/bin/caddy
+    cd ~/.composer/vendor/laravel/valet/bin
+    ln -s /usr/local/bin/caddy
+}
+
+alias valet-fix="__valet_fix"
