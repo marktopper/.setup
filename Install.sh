@@ -1,6 +1,9 @@
 # Die on failures
 set -e
 
+# Prepare with permissions
+sudo chown -R "$USER" /usr/local
+
 # Load global system
 source ~/.setup/System/Global.sh
 
