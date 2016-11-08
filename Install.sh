@@ -49,13 +49,11 @@ load System/Install/OhMyZsh.sh
 # Install Scripts
 load System/Install/Scripts.sh
 
+# Install Pip Packages
+load System/Install/Pips.sh
+
 # Set permisions for Homebrew folder
 sudo chown -R $(whoami) $(brew --prefix)
-
-# Install slack-cleaner
-# https://github.com/kfei/slack-cleaner
-# TODO: Move to config
-pip install slack-cleaner
 
 if [[ $WRITE_TO_PROFILE == true ]]; then
   # Add Profile.sh to .bash_profile
