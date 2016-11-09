@@ -3,6 +3,7 @@ INSTALL_PIPS=true
 
 # Define packages applications to install
 pips=(\
+ six \
  # https://github.com/kfei/slack-cleaner
  slack-cleaner \
 )
