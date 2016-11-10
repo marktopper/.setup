@@ -32,13 +32,12 @@ bottles=(\
  git-flow \
  homebrew/php/phpunit \
  hub \
- #httpie \
+ httpie \
  icoutils \
  imagemagick \
  popt \
  libmemcached \
  librsync \
- memcached \
  openssl \
  ossp-uuid \
  qt5 \
@@ -53,6 +52,9 @@ bottles=(\
  python \
  composer \
  node \
+ # Conflicts with mysql, so use either MySQL or MariaDB
+ #mariadb \
+ memcached \
  # Conflicts with mariadb, so use either MySQL or MariaDB
  mysql \
  # https://github.com/nvbn/thefuck
@@ -60,8 +62,6 @@ bottles=(\
  docker \
  # https://github.com/ravenac95/sudolikeaboss
  sudolikeaboss \
- # Conflicts with mysql, so use either MySQL or MariaDB
- #mariadb \
  yarn \
  # Required by OhMyZsh
  zsh \
