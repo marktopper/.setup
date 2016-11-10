@@ -62,6 +62,7 @@ bottles=(\
  sudolikeaboss \
  # Conflicts with mysql, so use either MySQL or MariaDB
  #mariadb \
+ yarn \
  # Required by OhMyZsh
  zsh \
  # Required by OhMyZsh
