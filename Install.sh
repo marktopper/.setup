@@ -43,9 +43,6 @@ load System/Install/Valet.sh
 # Install Homestead
 load System/Install/Homestead.sh
 
-# Install OhMyZsh
-load System/Install/OhMyZsh.sh
-
 # Install Scripts
 load System/Install/Scripts.sh
 

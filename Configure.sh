@@ -19,7 +19,6 @@ configure Apps
 #configure Backup
 configure Homestead
 configure Node
-configure OhMyZsh
 configure Packages
 configure SSH
 configure Valet

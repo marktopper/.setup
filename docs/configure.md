@@ -16,7 +16,6 @@ If you wish to overwrite your `SetupUserConfig` folder, then first run `rm -rf ~
 * [Bottles](https://github.com/marktopper/.setup/tree/master/docs/configure-bottles.md)
 * [Homestead](https://github.com/marktopper/.setup/tree/master/docs/configure-homestead.md)
 * [Node](https://github.com/marktopper/.setup/tree/master/docs/configure-node.md)
-* [OhMyZsh](https://github.com/marktopper/.setup/tree/master/docs/configure-ohmyzsh.md)
 * [Packages](https://github.com/marktopper/.setup/tree/master/docs/configure-packages.md)
 * [Valet](https://github.com/marktopper/.setup/tree/master/docs/configure-valet.md)
 * [SSH](https://github.com/marktopper/.setup/tree/master/docs/configure-ssh.md)
