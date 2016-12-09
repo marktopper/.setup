@@ -92,3 +92,71 @@ function laravel-docs {
     local section=${1:-''}
     open "https://laravel.com/docs/$section"
 }
+
+# IP/ASN lookup by using cymru's whois server
+#>whois 8.8.8.8
+#AS      | IP               | AS Name
+#15169   | 8.8.8.8          | GOOGLE - Google Inc., US
+#>cwhois as15169
+#AS Name
+#GOOGLE - Google Inc., US
+function cwhois() {
+    whois -h whois.cymru.com "$@";
+}
+
+_symfony_console () {
+  echo "php $(find . -maxdepth 2 -mindepth 1 -name 'console' -type f | head -n 1)"
+}
+_symfony2_get_command_list () {
+   `_symfony_console` --no-ansi | sed "1,/Available commands/d" | awk '/^  ?[^ ]+ / { print $1 }'
+}
+_symfony2 () {
+   compadd `_symfony2_get_command_list`
+}
+#Symfony aliases
+alias sf='`_symfony_console`'
+alias sfcl='sf cache:clear'
+alias sfai='sf assets:install'
+alias sfsr='sf server:run -vvv'
+alias sfsc='sf security:check'
+alias sfcw='sf cache:warmup'
+alias sfroute='sf debug:router'
+alias sfcontainer='sf debug:container'
+alias sfgb='sf generate:bundle'
+alias sfgc='sf generate:controller'
+alias sfdev='sf --env=dev'
+alias sfprod='sf --env=prod'
+#Doctrine alias
+alias sfge='sf doctrine:generate:entity'
+alias sfdc='sf doctrine:database:create'
+alias sfdd='sf doctrine:database:drop --force'
+alias sfsc='sf doctrine:schema:create'
+alias sfsu='sf doctrine:schema:update'
+#Need DoctrineFixturesBundle
+alias sffixtures='sf doctrine:fixtures:load'
+
+
+
+
+#
+# Aliases
+# (sorted alphabetically)
+#
+
+alias dk='docker'
+
+alias dkb='docker build'
+
+alias dkex='docker exec'
+alias dkexit='docker exec -it'
+
+alias dknet='docker network'
+
+alias dkps='docker ps'
+alias dkpsa='docker ps -a'
+
+alias dkr='docker run'
+alias dkrit='docker run -it'
+
+alias dkv='docker version'
+alias dkvol='docker volume'
