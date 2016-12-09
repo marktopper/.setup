@@ -23,7 +23,9 @@ apps=(\
  #parallels-desktop \
  #phpstorm \
  #postbox \
+ #postgres \
  #postman \
+ #psequel \
  qlmarkdown \
  #sequel-pro \
  #skype \
