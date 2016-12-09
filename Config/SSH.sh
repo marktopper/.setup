@@ -1,5 +1,7 @@
 ENABLE_SSH_SYNCING=true
+ENABLE_SSH_MODDING=true
 AUTO_SYNC_SSH=true
+AUTO_MOD_SSH=true
 
 SSH_PATH=~/.ssh
 SSH_BACKUP_PATH=~/Dropbox/.ssh
