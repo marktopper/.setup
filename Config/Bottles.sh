@@ -48,6 +48,8 @@ bottles=(\
  wget \
  libxml2 \
  php70 \
+ #php70-mcrypt \
+ #postgres \
  # Required for using pip
  python \
  composer \
