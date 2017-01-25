@@ -18,6 +18,7 @@ apps=(\
  #google-chrome \
  #iterm2 \
  java \
+ #launchrocket \
  #mamp \
  #opera \
  #parallels-desktop \
