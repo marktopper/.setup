@@ -160,3 +160,8 @@ alias dkrit='docker run -it'
 
 alias dkv='docker version'
 alias dkvol='docker volume'
+
+# Reload bash profile
+function reload {
+    source ~/.bash_profile
+}
