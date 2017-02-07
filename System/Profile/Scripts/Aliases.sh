@@ -178,6 +178,9 @@ fi
 # List all files colorized in long format, including dot files
 alias ll="ls -lah ${colorflag}"
 
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
 # Make me say "please"
 alias please="sudo"
 
