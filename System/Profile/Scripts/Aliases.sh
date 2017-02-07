@@ -160,3 +160,7 @@ alias dkrit='docker run -it'
 
 alias dkv='docker version'
 alias dkvol='docker volume'
+
+
+# List all files colorized in long format, including dot files
+alias ll="ls -lah ${colorflag}"
