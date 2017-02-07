@@ -162,5 +162,11 @@ alias dkv='docker version'
 alias dkvol='docker volume'
 
 
+# Reload bash profile
+function reload {
+    source ~/.bash_profile
+}
+
+
 # List all files colorized in long format, including dot files
 alias ll="ls -lah ${colorflag}"
