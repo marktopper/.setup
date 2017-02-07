@@ -168,6 +168,13 @@ function reload {
 }
 
 
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+else # OS X `ls`
+    colorflag="-G"
+fi
+
 # List all files colorized in long format, including dot files
 alias ll="ls -lah ${colorflag}"
 
