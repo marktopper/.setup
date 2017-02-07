@@ -57,6 +57,7 @@ bottles=(\
  # Conflicts with mysql, so use either MySQL or MariaDB
  #mariadb \
  memcached \
+ #mongodb \
  # Conflicts with mariadb, so use either MySQL or MariaDB
  mysql \
  # https://github.com/nvbn/thefuck

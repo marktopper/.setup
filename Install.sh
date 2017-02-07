@@ -52,6 +52,10 @@ load System/Install/Pips.sh
 # Set permisions for Homebrew folder
 sudo chown -R $(whoami) $(brew --prefix)
 
+# Add required folder for running mongod.
+sudo mkdir -p /data/db
+sudo chown -R $(whoami) /data/db
+
 if [[ $WRITE_TO_PROFILE == true ]]; then
   # Add Profile.sh to .bash_profile
   # TODO: Append to end of file instead
