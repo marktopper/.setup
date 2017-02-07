@@ -170,3 +170,6 @@ function reload {
 
 # List all files colorized in long format, including dot files
 alias ll="ls -lah ${colorflag}"
+
+# Make me say "please"
+alias please="sudo"
