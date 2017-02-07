@@ -173,3 +173,13 @@ alias ll="ls -lah ${colorflag}"
 
 # Make me say "please"
 alias please="sudo"
+
+
+# Easier navigation: .., ..., ~ and -
+alias ..="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
