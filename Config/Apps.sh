@@ -41,4 +41,5 @@ apps=(\
  #vagrant-manager \
  #versions \
  virtualbox \
+ #wd-my-cloud \
 )
