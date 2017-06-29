@@ -11,6 +11,10 @@ taps=(\
  homebrew/dupes \
  # Required for installing php70 bottle
  homebrew/php \
+ # Required for installing drivers
+ caskroom/drivers \
+ # Required for installing fonts
+ caskroom/fonts \
  # Required for installing specific versions of bottles
  caskroom/versions \
 )
