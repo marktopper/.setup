@@ -34,7 +34,7 @@ apps=(\
  #sourcetree \
  #spotify \
  #steam \
- #sublime-text3 \
+ #sublime-text \
  #teamviewer \
  #transmit \
  vagrant \
