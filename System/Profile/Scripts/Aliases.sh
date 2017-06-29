@@ -48,7 +48,7 @@ alias ls="ls -G"
 alias lsla="ls -la"
 alias laravel-cs-fixer="php-cs-fixer fix . --fixers=\"-psr0\""
 
-function valet-site () {
+function __valet_site () {
   if [[ -z $1 ]]; then
     print_error "Missing argument [name]."
   else
@@ -60,6 +60,7 @@ function valet-site () {
     cd $GO
   fi
 }
+alias valet-site="__valet_site"
 
 function chuck () {
   echo `curl -s http://api.icndb.com/jokes/random` | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["value"]["joke"]';
@@ -76,22 +77,25 @@ function servephp () {
 }
 
 # A fix since Valet often break on Sierra.
-function valet-fix () {
+function __valet_fix () {
     brew uninstall caddy && brew install caddy
     rm ~/.composer/vendor/laravel/valet/bin/caddy
     cd ~/.composer/vendor/laravel/valet/bin
     ln -s /usr/local/bin/caddy
 }
+alias valet-fix="__valet_fix"
 
-function node-docs {
+function __node_docs {
     local section=${1:-all}
     open "https://nodejs.org/docs/$(node --version)/api/$section.html"
 }
+alias node-docs="__node_docs"
 
-function laravel-docs {
+function __laravel_docs {
     local section=${1:-''}
     open "https://laravel.com/docs/$section"
 }
+alias laravel-docs="__laravel_docs"
 
 # IP/ASN lookup by using cymru's whois server
 #>whois 8.8.8.8
