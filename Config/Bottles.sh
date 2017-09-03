@@ -51,7 +51,7 @@ bottles=(\
  tmux \
  wget \
  libxml2 \
- php71 \
+ php72 \
  #php71-mcrypt \
  #postgres \
  # Required for using pip
