@@ -53,8 +53,9 @@ bash_prompt() {
   local UC=$W                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
 
-  PS1="$C\$(__my_chruby_version)$EMY\w$EMW$(__my_git_prompt)${NONE} $ "
+  #PS1="$C\$(__my_chruby_version)$EMY\w$EMW$(__my_git_prompt)${NONE} $ "
   #PS1="[\W]\$ "
+  PS1="$EMY\w$EMR$(__my_git_prompt)${NONE} $ "
 }
 
 bash_prompt
