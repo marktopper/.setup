@@ -19,3 +19,6 @@ fi
 
 # If Adobe Creative Cloud is installed, run installer
 open /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app > /dev/null 2>&1 || true
+
+# If Battle.net is installed, run installer
+open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app > /dev/null 2>&1 || true
