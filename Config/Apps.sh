@@ -10,6 +10,7 @@ apps=(\
  #battle-net \
  #bartender \
  #coda \
+ #discord \
  #dropbox \
  #filezilla \
  #firefox \
