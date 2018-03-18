@@ -7,8 +7,6 @@ PIN_BOTTLES=true
 taps=(\
  # Required for installing sudolikeaboss bottle
  ravenac95/sudolikeaboss \
- # Required!
- homebrew/dupes \
  # Required for installing php70 bottle
  homebrew/php \
  # Required for installing drivers
