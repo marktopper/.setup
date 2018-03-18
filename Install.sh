@@ -47,7 +47,7 @@ load System/Install/Scripts.sh
 load System/Install/Pips.sh
 
 # Set permisions for Homebrew folder
-sudo chown -R $(whoami) $(brew --prefix)
+sudo chown -R $(whoami) $(brew --prefix)/*
 
 # Add required folder for running mongod.
 sudo mkdir -p /data/db
