@@ -1,4 +1,7 @@
 if [[ $INSTALL_PIPS == true ]]; then
+  sudo easy_install pip
+  sudo chown -R $USER /Library/Python/2.7
+
   # Install python package if not installed
   function install_pip {
     print_header "Installing $1..."
