@@ -1,9 +1,10 @@
+# TODO: Make settings for these preferences
 if [[ $INSTALL_PREFERENCES == true ]]; then
   # Set a blazingly fast keyboard repeat rate
-  defaults write NSGlobalDomain KeyRepeat -int 0.02
+  defaults write NSGlobalDomain KeyRepeat -int 2
 
   # Set a shorter Delay until key repeat
-  defaults write NSGlobalDomain InitialKeyRepeat -int 12
+  defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
   # Add a context menu item for showing the Web Inspector in web views
   defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
