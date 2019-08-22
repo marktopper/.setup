@@ -30,7 +30,6 @@ bottles=(\
  gf-complete \
  git \
  git-flow \
- homebrew/php/phpunit \
  hub \
  httpie \
  icoutils \
@@ -49,6 +48,7 @@ bottles=(\
  libxml2 \
  php@7.3 \
  #php71-mcrypt \
+ phpunit \
  #postgres \
  # Required for using pip
  python \
