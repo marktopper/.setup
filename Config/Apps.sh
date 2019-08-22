@@ -19,6 +19,7 @@ apps=(\
  #google-chrome \
  #iterm2 \
  java \
+ jetbrains-toolbox \
  #launchrocket \
  #mamp \
  #opera \
