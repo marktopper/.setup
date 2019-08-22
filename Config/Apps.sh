@@ -39,9 +39,9 @@ apps=(\
  #sublime-text \
  #teamviewer \
  #transmit \
- vagrant \
+ #vagrant \
  #vagrant-manager \
  #versions \
- virtualbox \
+ #virtualbox \
  #wd-my-cloud \
 )
