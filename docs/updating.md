@@ -8,8 +8,7 @@ Updating `.setup` will get you the latest features and tools.
 
 In order to update this installer script you must run the following task once in order to get the git repository.
 
-> Please note that the below commands will remove your current configurations.  
-> You may want to backup your current configurations before running the below commands and then you can manually merge the configurations afterwards.
+> Your configuration will **NOT** be lost during this process.
 
 ```
 rm -rf ~/.setup
