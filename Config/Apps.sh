@@ -11,6 +11,7 @@ apps=(\
  #bartender \
  #coda \
  #discord \
+ #docker \
  #dropbox \
  #filezilla \
  #firefox \
