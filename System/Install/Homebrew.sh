@@ -8,7 +8,7 @@ if [[ $INSTALL_HOMEBREW ]]; then
   else
     brew upgrade
     brew update
+    brew cask upgrade
     brew cleanup
-    brew cask cleanup
   fi
 fi
