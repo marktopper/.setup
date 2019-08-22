@@ -13,7 +13,6 @@ apps=(\
  #discord \
  #docker \
  #dropbox \
- #filezilla \
  #firefox \
  #github-desktop \
  #gitter \
