@@ -6,6 +6,11 @@ if [ ! -d ~/.SetupUserConfig ]; then
     cp -r ~/.setup/Config ~/.SetupUserConfig
 fi
 
+# Load all default config files
+for ENTRY in `ls ~/.setup/Config`; do
+    source ~/.setup/Config/"$ENTRY"
+done
+
 # Load all user config files
 for ENTRY in `ls ~/.SetupUserConfig`; do
     source ~/.SetupUserConfig/"$ENTRY"
