@@ -24,6 +24,7 @@ apps=(\
  #mamp \
  #opera \
  #parallels-desktop \
+ #paw \
  #phpstorm \
  #postbox \
  #postgres \
