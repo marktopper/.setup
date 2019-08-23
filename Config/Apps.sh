@@ -37,6 +37,7 @@ apps=(\
  #spotify \
  #steam \
  #sublime-text \
+ #tableplus \
  #teamviewer \
  #transmit \
  #vagrant \
