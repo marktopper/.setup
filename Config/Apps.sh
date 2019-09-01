@@ -9,6 +9,7 @@ apps=(\
  #atom \
  #battle-net \
  #bartender \
+ #chromedriver \
  #coda \
  #discord \
  #docker \
