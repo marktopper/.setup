@@ -32,6 +32,7 @@ apps=(\
  #postman \
  #psequel \
  qlmarkdown \
+ #raindropio \
  #sequel-pro \
  #skype \
  #sonos \
