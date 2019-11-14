@@ -8,11 +8,11 @@ taps=(\
  # Required for installing sudolikeaboss bottle
  ravenac95/sudolikeaboss \
  # Required for installing drivers
- caskroom/drivers \
+ homebrew/cask-drivers \
  # Required for installing fonts
- caskroom/fonts \
+ homebrew/cask-fonts \
  # Required for installing specific versions of bottles
- caskroom/versions \
+ homebrew/cask-versions \
 )
 
 # Define bottles to install
