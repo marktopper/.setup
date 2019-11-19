@@ -43,6 +43,7 @@ bottles=(\
  rdiff-backup \
  readline \
  redis \
+ #selenium-server-standalone \
  tmux \
  wget \
  libxml2 \

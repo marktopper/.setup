@@ -9,6 +9,7 @@ apps=(\
  #atom \
  #battle-net \
  #bartender \
+ #chromedriver \
  #coda \
  #discord \
  #docker \
@@ -19,17 +20,19 @@ apps=(\
  #google-chrome \
  #iterm2 \
  java \
- jetbrains-toolbox \
+ #jetbrains-toolbox \
  #launchrocket \
  #mamp \
  #opera \
  #parallels-desktop \
+ #paw \
  #phpstorm \
  #postbox \
  #postgres \
  #postman \
  #psequel \
  qlmarkdown \
+ #raindropio \
  #sequel-pro \
  #skype \
  #sonos \
@@ -37,6 +40,7 @@ apps=(\
  #spotify \
  #steam \
  #sublime-text \
+ #tableplus \
  #teamviewer \
  #transmit \
  #vagrant \
