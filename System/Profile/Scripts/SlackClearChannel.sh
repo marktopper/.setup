@@ -1,3 +1,4 @@
+# TODO: Save in Dropbox
 # Clear channels in Slack (ask for token one first use for a new team)
 # Usage: clear-slack-channel team channel
 __clear_slack_channel () {
