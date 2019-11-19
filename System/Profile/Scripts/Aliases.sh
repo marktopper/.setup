@@ -200,3 +200,77 @@ alias -- -="cd -"
 
 # Editor
 alias subl='open -a "Sublime Text"'
+
+# Docker Compose
+alias dc='/usr/local/bin/docker-compose'
+alias dcu='/usr/local/bin/docker-compose up -d'
+alias dcup='/usr/local/bin/docker-compose up -d'
+alias dcs='/usr/local/bin/docker-compose stop'
+alias dcstop='/usr/local/bin/docker-compose stop'
+alias dcb='/usr/local/bin/docker-compose up -d --build'
+alias dcbuild='/usr/local/bin/docker-compose up -d --build'
+alias dce='/usr/local/bin/docker-compose exec'
+alias dcexec='/usr/local/bin/docker-compose exec'
+alias 'docker-compose'='__enforce_aliases /usr/local/bin/docker-compose \
+"dc: docker-compose" \
+"dcu: docker-compose up -d" \
+"dcs: docker-compose stop" \
+"dcb: docker-compose up -d build" \
+"dce: docker-compose exec" \
+"__END__"'
+
+without_alias_enforcement() {
+  if [[ $ENFORCE_ALIASES == true ]]; then
+    ENFORCE_ALIASES_BACKUP="${ENFORCE_ALIASES}"
+    ENFORCE_ALIASES=false
+  fi
+}
+
+reset_alias_enforcement() {
+  ENFORCE_ALIASES="${ENFORCE_ALIASES_BACKUP}"
+}
+
+# Usage:
+# alias 'some-method with-args or-whatever'='__enforce_aliases /path/to/executable \
+# "short-command: long-command" \
+# "shorter: longer-command with-whatever args" \
+# "__END__"'
+__enforce_aliases() {
+  if [[ $ENFORCE_ALIASES == true ]]; then
+    # Complain and tell the user to use the shortcuts.
+    echo -e "\e[31m⛔️ Usage of shortcuts enforced!\e[39m"
+    echo "Please use one of the following aliases:"
+
+    shift
+    for cmd in "$@"
+    do
+      if [ $cmd = "__END__" ]; then
+        break
+      fi
+
+      echo "* $cmd"
+    done
+
+    echo ""
+    echo "If this is ran by a third-part command, you can surround the command by 'without_alias_enforcement && [COMMAND] && reset_alias_enforcement'."
+    echo "Example: without_alias_enforcement && docker-compose up -d && reset_alias_enforcement"
+  else
+    # Run original command, but directly to executable
+    # sample: docker-compose exec php bash => /usr/local/bin/docker-compose exec php bash
+    PARAMS=()
+
+    STARTED=false
+    for cmd in "$@"
+    do
+      if [[ $STARTED == true ]]; then
+        PARAMS+=($cmd)
+      fi
+
+      if [ $cmd = "__END__" ]; then
+        STARTED=true
+      fi
+    done
+
+    ($1 $PARAMS[@])
+  fi
+}
