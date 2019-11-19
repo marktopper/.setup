@@ -50,14 +50,26 @@ load System/Install/Pips.sh
 sudo chown -R $(whoami) $(brew --prefix)/*
 
 # Add required folder for running mongod.
-sudo mkdir -p /data/db
-sudo chown -R $(whoami) /data/db
+#sudo mkdir -p /data/db
+#sudo chown -R $(whoami) /data/db
+
+# Ensure profile exists
+touch ~/.bash_profile
 
 if [[ $WRITE_TO_PROFILE == true ]]; then
   # Add Profile.sh to .bash_profile
-  # TODO: Append to end of file instead
-  # TODO: Do not append if it's already there
-  echo 'source ~/.setup/System/Profile.sh' > ~/.bash_profile
+  if grep -q "source ~/.setup/System/Profile.sh" ~/.bash_profile; then
+  	echo "Profile already loading in ~/.bash_profile"
+  else
+  	echo '\n\n#Load .setup profile\nsource ~/.setup/System/Profile.sh\n\n' >> ~/.bash_profile
+  fi
+
+  # Add Profile.sh to .zshrc
+  if grep -q "source ~/.setup/System/Profile.sh" ~/.zshrc; then
+  	echo "Profile already loading in ~/.zshrc"
+  else
+  	echo "\n\n#Load .setup profile\nsource ~/.setup/System/Profile.sh\n\n" >> ~/.zshrc
+  fi
 fi
 
 print_success "Installation complete!"
