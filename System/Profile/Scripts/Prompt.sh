@@ -58,5 +58,5 @@ bash_prompt() {
   PS1="$EMY\w$EMR$(__my_git_prompt)${NONE} $ "
 }
 
-bash_prompt
+#bash_prompt
 unset bash_prompt
