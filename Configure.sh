@@ -4,11 +4,15 @@ if [ ! -d ~/.SetupUserConfig ]; then
 fi
 
 configure () {
+    # Copy file if it does not exists yet in .SetupUserConfig
+    if [ ! -f "${HOME}/.SetupUserConfig/${1}.sh" ]; then
+      cp "${HOME}/.setup/Config/${1}.sh" "${HOME}/.SetupUserConfig/${1}.sh"
+    fi
+
     read -p "Configure $1? [y/N] " reply
 
     if [[ $reply =~ ^[Yy]$ ]]
     then
-        # TODO: if file does not exists, copy it from ~/.setup/Config/$1.sh
         open ~/.SetupUserConfig/$1.sh
     fi
 }
@@ -22,6 +26,7 @@ configure Node
 configure Packages
 configure SSH
 configure Valet
+configure Sync
 
 read -p "Press enter once done configuring "
 
