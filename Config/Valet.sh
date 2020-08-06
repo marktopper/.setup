@@ -6,4 +6,5 @@ CONFIGURE_VALET=true # Requires that Valet are installed
 VALET_PATH=~/Sites
 
 # Define whether or not to automatically secure Valet sites
-VALET_AUTO_SECURE=true
+# WARNING: Requires sudo password at this point when terminal boot, fix later by adding valet to sudoers
+VALET_AUTO_SECURE=false
