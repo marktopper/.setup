@@ -6,6 +6,6 @@ packages=(\
  laravel/installer \
  laravel/spark-installer \
  laravel/valet \
- friendsofphp/php-cs-fixer \
- squizlabs/php_codesniffer \
+ #friendsofphp/php-cs-fixer \
+ #squizlabs/php_codesniffer \
 )
